@@ -1,27 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
-    <h1>Welcome to my Aboutpage</h1>
-</head>
-<body>
     <nav>
-    <ul>
-        <li><a href="Home.html">Home</a></li>
-        <li><a href="Projects.html">Projects</a></li>
-        <li><a href="Contact.html">Contact</a></li>
-        <li><a href="About.html">About</a></li>
-      </ul>
-    </nav> 
+</head>
+
+<body>
+   
+    
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="About.html#more">About</a></li>
+        </ul>
+    </nav>
     <div>
         <h2>About</h2>
 
-        <img src="Images/develop.png" alt="fullstack webpage" width="500" height="333">
-    </div>    
+        <div class="about-row" style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap;">
+            <img src="Images/develop.png" alt="fullstack webpage" style="max-width:48%;height:auto;flex:0 0 48%;">
+            <div class="about-text" style="flex:1;min-width:220px;">
+                <h3>Welcome</h3>
+                <p>Hi I'm John Doe fullstack developer inside this webpage is where I put my projects so feel free
+                    to check it out </p>
+                <p>The services that I offer is :</p>
+                <p>I focus on building scalable fullstack applications, improving UX, and securing services.</p>
 
-    
-</body>
+                <div id="more" style="display:none; margin-top:1rem;">
+                
+                    <ul>
+                        <li>Fullstack Web Development</li>
+                        <li>Web UI Designing</li>
+                        <li>Database Managing</li>
+                        <li>Web Troubleshooting</li>
+                        <li>Web Security System</li>
+                        <li>Performance tuning</li>
+                        <li>Accessibility improvements</li>
+                        <li>Deployment & CI/CD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            (function () {
+                if (window.location.hash === '#more') {
+                    var el = document.getElementById('more');
+                    if (el) {
+                        el.style.display = 'block';
+                        el.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            })();
+            var el = document.getElementById('more');
+            function reveal() {
+                if (!el) return;
+                el.style.display = 'block';
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+            var shouldReveal = false;
+            if (window.location.hash === '#more') shouldReveal = true;
+            try {
+                if (localStorage.getItem('revealAbout') === '1') {
+                    shouldReveal = true;
+                    localStorage.removeItem('revealAbout');
+                }
+            } catch (e) { }
+            if (!shouldReveal && document.referrer && document.referrer.indexOf('Home.html') !== -1) {
+                shouldReveal = true;
+            }
+            if (shouldReveal) reveal();
+        </script>
+        <script src="scripts.js"></script>
+
+    </body>
+
 </html>

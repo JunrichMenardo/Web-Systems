@@ -1,99 +1,139 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: antiquewhite;
-  }
-  div {
-    margin: 20px;
-    padding: 10px;
-    border: #333333;
-    border-radius: 10px;
-    contain: content;
-    background-color: rgb(201, 195, 195);
-    background-size: 100px 80px;
-    font-size: large;
+  margin: 0;
+  padding: 0;
+  background-color: antiquewhite;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('Images/INTRO.jpg') center/cover no-repeat fixed;
+  color: #ffffff;
+}
+
+div {
+  margin: 20px;
+  padding: 10px;
+  border: #333333;
+  border-radius: 10px;
+  contain: content;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 100px 80px;
+  font-size: large;
 
 
-  }
-  h2, p {
-    margin: 10px;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333333;
-  }
-  
-  nav ul li {
-    float: left;
-  }
-  
-  nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  ul li a:hover {
-    background-color: rgb(151, 133, 109);
-  
-  }
+}
 
-  button {
-    border: #333333;
-    border-radius: 5px;
-    background-color: rgb(172, 155, 134);
-    padding: 10px 8px;
-    
-  }
+div.about-row img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 
-  button:hover {
-    background-color: beige;
-  }
+div.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: transparent;
+}
 
-  header {
-    background-color: bisque;
-  } 
-  
-  head, h1 {
-    text-align: center;
+div.intro {
+  background-color: transparent;
+  text-align: center;
+  padding: 200px;
 
-  }
+}
 
-  * {box-sizing: border-box;}
+div.intro h1,
+div.intro h2 {
+  font-size: 50px;
+  color: #d9edf0;
+  text-shadow: 0 4px 12px rgba0, 0, 0, 0, 0.85;
+  line-height: 0.8;
+}
 
-  input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
-  
-  input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-  
-  .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  }
-  
+div.intro button {
+  font-size: 20px;
+  padding: 15px 25px;
+  margin: 10px;
+  background-color: #d9edf0;
+}
+
+h2,
+p {
+  margin: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0eafbb;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: rgb(151, 133, 109);
+
+}
+
+button {
+  border: #333333;
+  border-radius: 5px;
+  background-color: rgb(172, 155, 134);
+  padding: 10px 8px;
+
+}
+
+button:hover {
+  background-color: beige;
+}
+
+header {
+  background-color: bisque;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
